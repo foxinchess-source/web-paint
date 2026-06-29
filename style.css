@@ -48,10 +48,15 @@ body {
   font-size: 0.95rem;
 }
 
-.save-btn {
+.header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.save-btn,
+.secondary-btn {
   border: 0;
-  background: #111827;
-  color: #fff;
   padding: 10px 16px;
   border-radius: 999px;
   font-weight: 600;
@@ -59,8 +64,23 @@ body {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
+.save-btn {
+  background: #111827;
+  color: #fff;
+}
+
 .save-btn:hover {
   background: #1f2937;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.secondary-btn:hover {
+  background: #e0e7ff;
   transform: translateY(-1px);
 }
 
@@ -118,6 +138,18 @@ body {
 .canvas-panel {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.brush-preview {
+  position: absolute;
+  border: 2px solid #111827;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  z-index: 2;
 }
 
 canvas {
@@ -129,6 +161,7 @@ canvas {
   background: #ffffff;
   box-shadow: inset 0 0 0 1px rgba(17, 24, 39, 0.04);
   touch-action: none;
+  cursor: none;
 }
 
 @media (max-width: 680px) {

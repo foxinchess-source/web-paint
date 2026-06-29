@@ -10,10 +10,13 @@
     <div class="app">
       <header class="topbar">
         <div>
-          <h1>Minimal Paint</h1>
+          <h1>Web Paint</h1>
           <p>Draw with a single brush and save your artwork.</p>
         </div>
-        <button id="saveBtn" class="save-btn">Save image</button>
+        <div class="header-actions">
+          <button id="clearBtn" class="secondary-btn">Clear canvas</button>
+          <button id="saveBtn" class="save-btn">Save image</button>
+        </div>
       </header>
 
       <main class="workspace">
@@ -35,6 +38,7 @@
 
         <section class="canvas-panel">
           <canvas id="paintCanvas" width="800" height="800"></canvas>
+          <div id="brushPreview" class="brush-preview" aria-hidden="true"></div>
         </section>
       </main>
     </div>
