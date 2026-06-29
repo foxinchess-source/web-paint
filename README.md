@@ -23,4 +23,4 @@ A simple analog of Paint directly in the browser with the ability to save a draw
 
 ## 📸 Preview
 
-![Interface](assets/screenshots/inerface.png)
+![Interface](assets/screenshots/interface.png)
